@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/change_block/change_block.png" type="Texture" id=1]
+[ext_resource path="res://scenes/change_block/change_block.gd" type="Script" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0, 63, 0 )
+
+[node name="ChangeBlock" type="StaticBody2D" groups=[
+"change_block",
+]]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+hframes = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0, 63, 0 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 1 )

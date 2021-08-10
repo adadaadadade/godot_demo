@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/damage_blcok/damage_blcok.gd" type="Script" id=1]
+[ext_resource path="res://scenes/damage_blcok/red.png" type="Texture" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[node name="DamageBlcok" type="Area2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_DamageBlcok_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_DamageBlcok_body_exited"]

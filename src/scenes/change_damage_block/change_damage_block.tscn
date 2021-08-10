@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/change_damage_block/change_damage_block.gd" type="Script" id=1]
+[ext_resource path="res://scenes/change_damage_block/change_damage_block.png" type="Texture" id=2]
+
+[node name="ChangeDamageBlock" type="Area2D" groups=[
+"change_block",
+]]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+hframes = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[connection signal="body_entered" from="." to="." method="_on_ChangeDamageBlock_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_ChangeDamageBlock_body_exited"]

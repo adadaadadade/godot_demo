@@ -1,0 +1,1205 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://scenes/disappear_block/disappear_blcok.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/level/level.gd" type="Script" id=4]
+[ext_resource path="res://scenes/coin/coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/check_point/CheckPoint.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/scene_change_block/scene_change_block.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/damage_blcok/damage_blcok.tscn" type="PackedScene" id=8]
+
+[node name="level1" type="Node2D"]
+position = Vector2( 564, 456 )
+script = ExtResource( 4 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 12, -8 )
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( -1966081, 0, 0, -2031616, 0, 0, -2031615, 0, 0, -2031614, 0, 0, -2031613, 0, 0, -2031612, 0, 0, -2031611, 0, 0, -2031610, 0, 0, -2031609, 0, 0, -2031608, 0, 0, -2031607, 0, 0, -2031606, 0, 0, -2031605, 0, 0, -2031604, 0, 0, -2031603, 0, 0, -2031602, 0, 0, -2031601, 0, 0, -2031600, 0, 0, -2031599, 0, 0, -2031598, 0, 0, -1900551, 0, 0, -1900550, 0, 0, -1900549, 0, 0, -1900548, 0, 0, -1900547, 0, 0, -1900546, 0, 0, -1900545, 0, 0, -1966061, 0, 0, -1966060, 0, 0, -1966059, 0, 0, -1966058, 0, 0, -1966057, 0, 0, -1966056, 0, 0, -1966055, 0, 0, -1966054, 0, 0, -1966053, 0, 0, -1966052, 0, 0, -1966051, 0, 0, -1966050, 0, 0, -1966049, 0, 0, -1966048, 0, 0, -1966047, 0, 0, -1966046, 0, 0, -1966045, 0, 0, -1966044, 0, 0, -1966043, 0, 0, -1966042, 0, 0, -1966041, 0, 0, -1966040, 0, 0, -1966039, 0, 0, -1966038, 0, 0, -1966037, 0, 0, -1966036, 0, 0, -1966035, 0, 0, -1966034, 0, 0, -1966033, 0, 0, -1966032, 0, 0, -1966031, 0, 0, -1835015, 0, 0, -1835009, 0, 0, -1900503, 0, 0, -1900495, 0, 0, -1769479, 0, 0, -1769473, 0, 0, -1834967, 0, 0, -1834959, 0, 0, -1834947, 0, 0, -1834946, 0, 0, -1834945, 0, 0, -1834944, 0, 0, -1834943, 0, 0, -1834942, 0, 0, -1834941, 0, 0, -1834940, 0, 0, -1834939, 0, 0, -1834938, 0, 0, -1703943, 0, 0, -1703940, 0, 0, -1703937, 0, 0, -1769411, 0, 0, -1638407, 0, 0, -1638404, 0, 0, -1703875, 0, 0, -1572871, 0, 0, -1572868, 0, 0, -1638350, 0, 0, -1638349, 0, 0, -1638348, 0, 0, -1638347, 0, 0, -1638346, 0, 0, -1638345, 0, 0, -1638344, 0, 0, -1638343, 0, 0, -1638342, 0, 0, -1638341, 0, 0, -1638340, 0, 0, -1638339, 0, 0, -1507335, 0, 0, -1507332, 0, 0, -1572799, 0, 0, -1572798, 0, 0, -1572797, 0, 0, -1572796, 0, 0, -1572795, 0, 0, -1572794, 0, 0, -1441799, 0, 0, -1441796, 0, 0, -1376263, 0, 0, -1376260, 0, 0, -1376259, 0, 0, -1376258, 0, 0, -1376257, 0, 0, -1441769, 0, 0, -1441768, 0, 0, -1441767, 0, 0, -1441766, 0, 0, -1441765, 0, 0, -1441738, 0, 0, -1441737, 0, 0, -1441736, 0, 0, -1441735, 0, 0, -1310727, 0, 0, -1310724, 0, 0, -1376199, 0, 0, -1245191, 0, 0, -1245188, 0, 0, -1245187, 0, 0, -1245186, 0, 0, -1245185, 0, 0, -1310720, 0, 0, -1310719, 0, 0, -1310718, 0, 0, -1310717, 0, 0, -1310716, 0, 0, -1310715, 0, 0, -1310714, 0, 0, -1310713, 0, 0, -1310712, 0, 0, -1310711, 0, 0, -1310710, 0, 0, -1310709, 0, 0, -1310708, 0, 0, -1310707, 0, 0, -1310706, 0, 0, -1310705, 0, 0, -1310704, 0, 0, -1310703, 0, 0, -1310702, 0, 0, -1310701, 0, 0, -1310700, 0, 0, -1310699, 0, 0, -1310698, 0, 0, -1310697, 0, 0, -1310696, 0, 0, -1310695, 0, 0, -1310694, 0, 0, -1310693, 0, 0, -1310692, 0, 0, -1310691, 0, 0, -1310690, 0, 0, -1310689, 0, 0, -1310688, 0, 0, -1310687, 0, 0, -1310686, 0, 0, -1310685, 0, 0, -1310684, 0, 0, -1310683, 0, 0, -1310682, 0, 0, -1310681, 0, 0, -1310680, 0, 0, -1310679, 0, 0, -1310678, 0, 0, -1310677, 0, 0, -1310676, 0, 0, -1310675, 0, 0, -1310674, 0, 0, -1310663, 0, 0, -1179655, 0, 0, -1179652, 0, 0, -1179651, 0, 0, -1179650, 0, 0, -1179649, 0, 0, -1245184, 0, 0, -1245183, 0, 0, -1245182, 0, 0, -1245181, 0, 0, -1245175, 0, 0, -1245138, 0, 0, -1245127, 0, 0, -1114119, 0, 0, -1114116, 0, 0, -1114115, 0, 0, -1114114, 0, 0, -1114113, 0, 0, -1179648, 0, 0, -1179647, 0, 0, -1179646, 0, 0, -1179645, 0, 0, -1179639, 0, 0, -1179602, 0, 0, -1179591, 0, 0, -1179584, 0, 0, -1179583, 0, 0, -1048583, 0, 0, -1048580, 0, 0, -1048579, 0, 0, -1048578, 0, 0, -1048577, 0, 0, -1114112, 0, 0, -1114111, 0, 0, -1114110, 0, 0, -1114109, 0, 0, -1114103, 0, 0, -1114066, 0, 0, -983047, 0, 0, -983044, 0, 0, -983043, 0, 0, -983042, 0, 0, -983041, 0, 0, -1048576, 0, 0, -1048575, 0, 0, -1048574, 0, 0, -1048573, 0, 0, -1048567, 0, 0, -1048559, 0, 0, -1048530, 0, 0, -917511, 0, 0, -983031, 0, 0, -983023, 0, 0, -983022, 0, 0, -983021, 0, 0, -983016, 0, 0, -983005, 0, 0, -982994, 0, 0, -851975, 0, 0, -917487, 0, 0, -917485, 0, 0, -917480, 0, 0, -917469, 0, 0, -917458, 0, 0, -786439, 0, 0, -786438, 0, 0, -786437, 0, 0, -786436, 0, 0, -786435, 0, 0, -786434, 0, 0, -786433, 0, 0, -851968, 0, 0, -851967, 0, 0, -851966, 0, 0, -851965, 0, 0, -851964, 0, 0, -851960, 0, 0, -851959, 0, 0, -851958, 0, 0, -851957, 0, 0, -851951, 0, 0, -851949, 0, 0, -851944, 0, 0, -851933, 0, 0, -851922, 0, 0, -720903, 0, 0, -786397, 0, 0, -786396, 0, 0, -786395, 0, 0, -786394, 0, 0, -786393, 0, 0, -786392, 0, 0, -786391, 0, 0, -786390, 0, 0, -786386, 0, 0, -655367, 0, 0, -720850, 0, 0, -589831, 0, 0, -589830, 0, 0, -589829, 0, 0, -589828, 0, 0, -589827, 0, 0, -589826, 0, 0, -589825, 0, 0, -655360, 0, 0, -655359, 0, 0, -655358, 0, 0, -655357, 0, 0, -655356, 0, 0, -655355, 0, 0, -655354, 0, 0, -655353, 0, 0, -655352, 0, 0, -655351, 0, 0, -655350, 0, 0, -655349, 0, 0, -655348, 0, 0, -655347, 0, 0, -655346, 0, 0, -655345, 0, 0, -655344, 0, 0, -655343, 0, 0, -655342, 0, 0, -655341, 0, 0, -655340, 0, 0, -655339, 0, 0, -655338, 0, 0, -655337, 0, 0, -655336, 0, 0, -655335, 0, 0, -655334, 0, 0, -655333, 0, 0, -655332, 0, 0, -655331, 0, 0, -655330, 0, 0, -655329, 0, 0, -655328, 0, 0, -655327, 0, 0, -655326, 0, 0, -655325, 0, 0, -655324, 0, 0, -655323, 0, 0, -655322, 0, 0, -655321, 0, 0, -655320, 0, 0, -655319, 0, 0, -655314, 0, 0, -524295, 0, 0, -589782, 0, 0, -458759, 0, 0, -524246, 0, 0, -393223, 0, 0, -458749, 0, 0, -458741, 0, 0, -458716, 0, 0, -458710, 0, 0, -458706, 0, 0, -327687, 0, 0, -393213, 0, 0, -393205, 0, 0, -393181, 0, 0, -393180, 0, 0, -393170, 0, 0, -262151, 0, 0, -327680, 0, 0, -327677, 0, 0, -327669, 0, 0, -327646, 0, 0, -327645, 0, 0, -327644, 0, 0, -327634, 0, 0, -196615, 0, 0, -262144, 0, 0, -262141, 0, 0, -262133, 0, 0, -262111, 0, 0, -262110, 0, 0, -262109, 0, 0, -262108, 0, 0, -262098, 0, 0, -131079, 0, 0, -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -196600, 0, 0, -196599, 0, 0, -196598, 0, 0, -196597, 0, 0, -196596, 0, 0, -196595, 0, 0, -196594, 0, 0, -196593, 0, 0, -196592, 0, 0, -196587, 0, 0, -196586, 0, 0, -196576, 0, 0, -196575, 0, 0, -196574, 0, 0, -196573, 0, 0, -196572, 0, 0, -196567, 0, 0, -196566, 0, 0, -196565, 0, 0, -196564, 0, 0, -196563, 0, 0, -196562, 0, 0, -196556, 0, 0, -196555, 0, 0, -196554, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4180, -1632 )
+
+[node name="CheckPoint" parent="." instance=ExtResource( 6 )]
+position = Vector2( -276, -232 )
+
+[node name="CheckPoint2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 940, -232 )
+
+[node name="CheckPoint5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 172, -872 )
+
+[node name="CheckPoint6" parent="." instance=ExtResource( 6 )]
+position = Vector2( -148, -1448 )
+
+[node name="CheckPoint7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3372, -232 )
+
+[node name="CheckPoint8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4204, -1576 )
+
+[node name="CheckPoint3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2668, -232 )
+
+[node name="CheckPoint4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2412, -808 )
+
+[node name="DamageBlcok" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1100, -136 )
+
+[node name="DamageBlcok2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1164, -136 )
+
+[node name="DamageBlcok3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1228, -136 )
+
+[node name="DamageBlcok4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1292, -136 )
+
+[node name="DamageBlcok5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2380, -136 )
+
+[node name="DamageBlcok6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2444, -136 )
+
+[node name="DamageBlcok7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2508, -136 )
+
+[node name="DamageBlcok8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2572, -136 )
+
+[node name="DamageBlcok234" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3532, -968 )
+
+[node name="DamageBlcok235" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3596, -968 )
+
+[node name="DamageBlcok236" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3660, -968 )
+
+[node name="DamageBlcok237" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3724, -968 )
+
+[node name="DamageBlcok238" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3788, -968 )
+
+[node name="DamageBlcok239" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3852, -968 )
+
+[node name="DamageBlcok240" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3916, -968 )
+
+[node name="DamageBlcok242" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3916, -1032 )
+
+[node name="DamageBlcok243" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3916, -1096 )
+
+[node name="DamageBlcok249" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4364, -968 )
+
+[node name="DamageBlcok250" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4364, -1032 )
+
+[node name="DamageBlcok251" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4364, -1096 )
+
+[node name="DamageBlcok252" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4364, -1160 )
+
+[node name="DamageBlcok253" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4364, -1224 )
+
+[node name="DamageBlcok254" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4364, -1288 )
+
+[node name="DamageBlcok259" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4364, -1352 )
+
+[node name="DamageBlcok260" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4364, -1416 )
+
+[node name="DamageBlcok261" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4364, -1480 )
+
+[node name="DamageBlcok241" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3980, -968 )
+
+[node name="DamageBlcok244" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4044, -968 )
+
+[node name="DamageBlcok245" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4108, -968 )
+
+[node name="DamageBlcok246" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4172, -968 )
+
+[node name="DamageBlcok247" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4236, -968 )
+
+[node name="DamageBlcok248" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4300, -968 )
+
+[node name="DamageBlcok9" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1548, -136 )
+
+[node name="DamageBlcok60" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1484, -136 )
+
+[node name="DamageBlcok10" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1612, -136 )
+
+[node name="DamageBlcok11" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1676, -136 )
+
+[node name="DamageBlcok12" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1740, -136 )
+
+[node name="DamageBlcok67" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1804, -136 )
+
+[node name="DamageBlcok68" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1868, -136 )
+
+[node name="DamageBlcok69" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1932, -136 )
+
+[node name="DamageBlcok70" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1996, -136 )
+
+[node name="DamageBlcok83" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -136 )
+
+[node name="DamageBlcok162" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3084, -136 )
+
+[node name="DamageBlcok180" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -136 )
+
+[node name="DamageBlcok181" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -136 )
+
+[node name="DamageBlcok255" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3276, -136 )
+
+[node name="DamageBlcok256" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3340, -136 )
+
+[node name="DamageBlcok257" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3404, -136 )
+
+[node name="DamageBlcok258" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -136 )
+
+[node name="DamageBlcok13" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2956, -584 )
+
+[node name="DamageBlcok14" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2956, -520 )
+
+[node name="DamageBlcok15" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2700, -712 )
+
+[node name="DamageBlcok75" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2636, -712 )
+
+[node name="DamageBlcok64" parent="." instance=ExtResource( 8 )]
+position = Vector2( 908, -1160 )
+
+[node name="DamageBlcok80" parent="." instance=ExtResource( 8 )]
+position = Vector2( 908, -1224 )
+
+[node name="DamageBlcok65" parent="." instance=ExtResource( 8 )]
+position = Vector2( 908, -1096 )
+
+[node name="DamageBlcok66" parent="." instance=ExtResource( 8 )]
+position = Vector2( 908, -1032 )
+
+[node name="DamageBlcok76" parent="." instance=ExtResource( 8 )]
+position = Vector2( 396, -896 )
+
+[node name="DamageBlcok79" parent="." instance=ExtResource( 8 )]
+position = Vector2( 396, -960 )
+
+[node name="DamageBlcok81" parent="." instance=ExtResource( 8 )]
+position = Vector2( 396, -1024 )
+
+[node name="DamageBlcok82" parent="." instance=ExtResource( 8 )]
+position = Vector2( 396, -1088 )
+
+[node name="DamageBlcok77" parent="." instance=ExtResource( 8 )]
+position = Vector2( 396, -832 )
+
+[node name="DamageBlcok78" parent="." instance=ExtResource( 8 )]
+position = Vector2( 396, -768 )
+
+[node name="DamageBlcok17" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2316, -712 )
+
+[node name="DamageBlcok18" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2252, -712 )
+
+[node name="DamageBlcok19" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2188, -712 )
+
+[node name="DamageBlcok20" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2124, -712 )
+
+[node name="DamageBlcok71" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2572, -712 )
+
+[node name="DamageBlcok72" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2508, -712 )
+
+[node name="DamageBlcok73" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2444, -712 )
+
+[node name="DamageBlcok74" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2380, -712 )
+
+[node name="DamageBlcok21" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2060, -712 )
+
+[node name="DamageBlcok22" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1996, -712 )
+
+[node name="DamageBlcok23" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1932, -712 )
+
+[node name="DamageBlcok24" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1868, -712 )
+
+[node name="DamageBlcok25" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1804, -712 )
+
+[node name="DamageBlcok26" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1740, -712 )
+
+[node name="DamageBlcok27" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1676, -712 )
+
+[node name="DamageBlcok28" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1612, -712 )
+
+[node name="DamageBlcok29" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1548, -712 )
+
+[node name="DamageBlcok30" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1484, -712 )
+
+[node name="DamageBlcok31" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1420, -712 )
+
+[node name="DamageBlcok32" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1356, -712 )
+
+[node name="DamageBlcok33" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1292, -712 )
+
+[node name="DamageBlcok34" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1228, -712 )
+
+[node name="DamageBlcok35" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1164, -712 )
+
+[node name="DamageBlcok36" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1100, -712 )
+
+[node name="DamageBlcok37" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1036, -712 )
+
+[node name="DamageBlcok38" parent="." instance=ExtResource( 8 )]
+position = Vector2( 972, -712 )
+
+[node name="DamageBlcok39" parent="." instance=ExtResource( 8 )]
+position = Vector2( 908, -712 )
+
+[node name="DamageBlcok40" parent="." instance=ExtResource( 8 )]
+position = Vector2( 844, -712 )
+
+[node name="DamageBlcok41" parent="." instance=ExtResource( 8 )]
+position = Vector2( 780, -712 )
+
+[node name="DamageBlcok42" parent="." instance=ExtResource( 8 )]
+position = Vector2( 716, -712 )
+
+[node name="DamageBlcok43" parent="." instance=ExtResource( 8 )]
+position = Vector2( 652, -712 )
+
+[node name="DamageBlcok44" parent="." instance=ExtResource( 8 )]
+position = Vector2( 588, -712 )
+
+[node name="DamageBlcok45" parent="." instance=ExtResource( 8 )]
+position = Vector2( 524, -712 )
+
+[node name="DamageBlcok46" parent="." instance=ExtResource( 8 )]
+position = Vector2( 460, -712 )
+
+[node name="DamageBlcok47" parent="." instance=ExtResource( 8 )]
+position = Vector2( 396, -712 )
+
+[node name="DamageBlcok48" parent="." instance=ExtResource( 8 )]
+position = Vector2( 332, -712 )
+
+[node name="DamageBlcok49" parent="." instance=ExtResource( 8 )]
+position = Vector2( 268, -712 )
+
+[node name="DamageBlcok50" parent="." instance=ExtResource( 8 )]
+position = Vector2( 204, -712 )
+
+[node name="DamageBlcok51" parent="." instance=ExtResource( 8 )]
+position = Vector2( 140, -712 )
+
+[node name="DamageBlcok52" parent="." instance=ExtResource( 8 )]
+position = Vector2( 76, -712 )
+
+[node name="DamageBlcok53" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12, -712 )
+
+[node name="DamageBlcok54" parent="." instance=ExtResource( 8 )]
+position = Vector2( -52, -712 )
+
+[node name="DamageBlcok55" parent="." instance=ExtResource( 8 )]
+position = Vector2( -116, -712 )
+
+[node name="DamageBlcok56" parent="." instance=ExtResource( 8 )]
+position = Vector2( -180, -712 )
+
+[node name="DamageBlcok57" parent="." instance=ExtResource( 8 )]
+position = Vector2( -244, -712 )
+
+[node name="DamageBlcok58" parent="." instance=ExtResource( 8 )]
+position = Vector2( -308, -712 )
+
+[node name="DamageBlcok59" parent="." instance=ExtResource( 8 )]
+position = Vector2( -372, -712 )
+
+[node name="DamageBlcok61" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1996, -1352 )
+
+[node name="DamageBlcok62" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1932, -1352 )
+
+[node name="DamageBlcok63" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1868, -1352 )
+
+[node name="DamageBlcok84" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1804, -1352 )
+
+[node name="DamageBlcok85" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1740, -1352 )
+
+[node name="DamageBlcok86" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1676, -1352 )
+
+[node name="DamageBlcok87" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1612, -1352 )
+
+[node name="DamageBlcok118" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2252, -1352 )
+
+[node name="DamageBlcok119" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2188, -1352 )
+
+[node name="DamageBlcok120" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2124, -1352 )
+
+[node name="DamageBlcok121" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2060, -1352 )
+
+[node name="DamageBlcok122" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2508, -1352 )
+
+[node name="DamageBlcok126" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1416 )
+
+[node name="DamageBlcok127" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1480 )
+
+[node name="DamageBlcok128" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1544 )
+
+[node name="DamageBlcok129" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1608 )
+
+[node name="DamageBlcok130" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1672 )
+
+[node name="DamageBlcok139" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1736 )
+
+[node name="DamageBlcok131" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1672 )
+
+[node name="DamageBlcok123" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2444, -1352 )
+
+[node name="DamageBlcok124" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2380, -1352 )
+
+[node name="DamageBlcok125" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2316, -1352 )
+
+[node name="DamageBlcok159" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2316, -1736 )
+
+[node name="DamageBlcok160" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2252, -1736 )
+
+[node name="DamageBlcok163" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2252, -1608 )
+
+[node name="DamageBlcok164" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2252, -1544 )
+
+[node name="DamageBlcok165" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2252, -1480 )
+
+[node name="DamageBlcok166" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2252, -1416 )
+
+[node name="DamageBlcok167" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2188, -1416 )
+
+[node name="DamageBlcok168" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2124, -1416 )
+
+[node name="DamageBlcok169" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2060, -1416 )
+
+[node name="DamageBlcok161" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2380, -1736 )
+
+[node name="DamageBlcok172" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2444, -1736 )
+
+[node name="DamageBlcok173" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2508, -1736 )
+
+[node name="DamageBlcok174" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2636, -1736 )
+
+[node name="DamageBlcok175" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2636, -1672 )
+
+[node name="DamageBlcok176" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2636, -1608 )
+
+[node name="DamageBlcok177" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2636, -1544 )
+
+[node name="DamageBlcok170" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2252, -1672 )
+
+[node name="DamageBlcok171" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2444, -1544 )
+
+[node name="DamageBlcok178" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2508, -1544 )
+
+[node name="DamageBlcok179" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2572, -1544 )
+
+[node name="DamageBlcok132" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2572, -1352 )
+
+[node name="DamageBlcok133" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2828, -1352 )
+
+[node name="DamageBlcok137" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2956, -1352 )
+
+[node name="DamageBlcok140" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2892, -1352 )
+
+[node name="DamageBlcok138" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1352 )
+
+[node name="DamageBlcok134" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2764, -1352 )
+
+[node name="DamageBlcok135" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2700, -1352 )
+
+[node name="DamageBlcok136" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2636, -1352 )
+
+[node name="DamageBlcok88" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1548, -1352 )
+
+[node name="DamageBlcok89" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1484, -1352 )
+
+[node name="DamageBlcok90" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1420, -1352 )
+
+[node name="DamageBlcok91" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1356, -1352 )
+
+[node name="DamageBlcok113" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1356, -1416 )
+
+[node name="DamageBlcok114" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1356, -1480 )
+
+[node name="DamageBlcok115" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1356, -1544 )
+
+[node name="DamageBlcok116" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1356, -1608 )
+
+[node name="DamageBlcok117" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1356, -1672 )
+
+[node name="DamageBlcok141" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1032 )
+
+[node name="DamageBlcok142" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1096 )
+
+[node name="DamageBlcok143" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1160 )
+
+[node name="DamageBlcok144" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1224 )
+
+[node name="DamageBlcok145" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -1288 )
+
+[node name="DamageBlcok146" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -712 )
+
+[node name="DamageBlcok147" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -776 )
+
+[node name="DamageBlcok148" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -840 )
+
+[node name="DamageBlcok149" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -904 )
+
+[node name="DamageBlcok150" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -968 )
+
+[node name="DamageBlcok151" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -392 )
+
+[node name="DamageBlcok152" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -456 )
+
+[node name="DamageBlcok153" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -520 )
+
+[node name="DamageBlcok156" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -200 )
+
+[node name="DamageBlcok157" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -264 )
+
+[node name="DamageBlcok158" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -328 )
+
+[node name="DamageBlcok200" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2508, -584 )
+
+[node name="DamageBlcok201" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2508, -456 )
+
+[node name="DamageBlcok202" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2508, -520 )
+
+[node name="DamageBlcok154" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -584 )
+
+[node name="DamageBlcok155" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3020, -648 )
+
+[node name="DamageBlcok182" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1416 )
+
+[node name="DamageBlcok183" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1480 )
+
+[node name="DamageBlcok184" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1544 )
+
+[node name="DamageBlcok185" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1608 )
+
+[node name="DamageBlcok186" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1352 )
+
+[node name="DamageBlcok187" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1032 )
+
+[node name="DamageBlcok188" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1096 )
+
+[node name="DamageBlcok189" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1160 )
+
+[node name="DamageBlcok190" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1224 )
+
+[node name="DamageBlcok191" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -1288 )
+
+[node name="DamageBlcok223" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -1288 )
+
+[node name="DamageBlcok192" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -712 )
+
+[node name="DamageBlcok193" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -776 )
+
+[node name="DamageBlcok194" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -840 )
+
+[node name="DamageBlcok195" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -904 )
+
+[node name="DamageBlcok196" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -968 )
+
+[node name="DamageBlcok208" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -1032 )
+
+[node name="DamageBlcok210" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -1096 )
+
+[node name="DamageBlcok211" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -712 )
+
+[node name="DamageBlcok217" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -776 )
+
+[node name="DamageBlcok220" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -840 )
+
+[node name="DamageBlcok221" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -904 )
+
+[node name="DamageBlcok222" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -968 )
+
+[node name="DamageBlcok197" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -648 )
+
+[node name="DamageBlcok198" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -584 )
+
+[node name="DamageBlcok199" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3148, -520 )
+
+[node name="DamageBlcok207" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -520 )
+
+[node name="DamageBlcok204" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -1032 )
+
+[node name="DamageBlcok205" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -712 )
+
+[node name="DamageBlcok206" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -776 )
+
+[node name="DamageBlcok209" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -968 )
+
+[node name="DamageBlcok218" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -1160 )
+
+[node name="DamageBlcok219" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -1096 )
+
+[node name="DamageBlcok224" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -1224 )
+
+[node name="DamageBlcok225" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -1352 )
+
+[node name="DamageBlcok226" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -1288 )
+
+[node name="DamageBlcok231" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3916, -1160 )
+
+[node name="DamageBlcok232" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3916, -1544 )
+
+[node name="DamageBlcok233" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3916, -1480 )
+
+[node name="DamageBlcok227" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -1352 )
+
+[node name="DamageBlcok228" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -1480 )
+
+[node name="DamageBlcok230" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -1544 )
+
+[node name="DamageBlcok229" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3212, -1416 )
+
+[node name="DamageBlcok212" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -520 )
+
+[node name="DamageBlcok213" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -584 )
+
+[node name="DamageBlcok214" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -648 )
+
+[node name="DamageBlcok215" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -328 )
+
+[node name="DamageBlcok216" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3468, -264 )
+
+[node name="DamageBlcok92" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1292, -1352 )
+
+[node name="DamageBlcok93" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1228, -1352 )
+
+[node name="DamageBlcok94" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1164, -1352 )
+
+[node name="DamageBlcok95" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1100, -1352 )
+
+[node name="DamageBlcok96" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1036, -1352 )
+
+[node name="DamageBlcok97" parent="." instance=ExtResource( 8 )]
+position = Vector2( 972, -1352 )
+
+[node name="DamageBlcok98" parent="." instance=ExtResource( 8 )]
+position = Vector2( 908, -1352 )
+
+[node name="DamageBlcok99" parent="." instance=ExtResource( 8 )]
+position = Vector2( 844, -1352 )
+
+[node name="DamageBlcok100" parent="." instance=ExtResource( 8 )]
+position = Vector2( 780, -1352 )
+
+[node name="DamageBlcok101" parent="." instance=ExtResource( 8 )]
+position = Vector2( 716, -1352 )
+
+[node name="DamageBlcok102" parent="." instance=ExtResource( 8 )]
+position = Vector2( 652, -1352 )
+
+[node name="DamageBlcok103" parent="." instance=ExtResource( 8 )]
+position = Vector2( 588, -1352 )
+
+[node name="DamageBlcok104" parent="." instance=ExtResource( 8 )]
+position = Vector2( 524, -1352 )
+
+[node name="DamageBlcok105" parent="." instance=ExtResource( 8 )]
+position = Vector2( 460, -1352 )
+
+[node name="DamageBlcok106" parent="." instance=ExtResource( 8 )]
+position = Vector2( 396, -1352 )
+
+[node name="DamageBlcok107" parent="." instance=ExtResource( 8 )]
+position = Vector2( 332, -1352 )
+
+[node name="DamageBlcok108" parent="." instance=ExtResource( 8 )]
+position = Vector2( 268, -1352 )
+
+[node name="DamageBlcok109" parent="." instance=ExtResource( 8 )]
+position = Vector2( 204, -1352 )
+
+[node name="DamageBlcok110" parent="." instance=ExtResource( 8 )]
+position = Vector2( 140, -1352 )
+
+[node name="DamageBlcok111" parent="." instance=ExtResource( 8 )]
+position = Vector2( 76, -1352 )
+
+[node name="DamageBlcok112" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12, -1352 )
+
+[node name="DamageBlcok16" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2700, -648 )
+
+[node name="DisppearBlock" parent="." instance=ExtResource( 3 )]
+position = Vector2( -180, -1736 )
+
+[node name="DisppearBlock2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -116, -1736 )
+
+[node name="DisppearBlock3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 140, -1416 )
+
+[node name="DisppearBlock4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 204, -1416 )
+
+[node name="DisppearBlock5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 524, -1480 )
+
+[node name="DisppearBlock33" parent="." instance=ExtResource( 3 )]
+position = Vector2( 652, -1480 )
+
+[node name="DisppearBlock34" parent="." instance=ExtResource( 3 )]
+position = Vector2( 588, -1480 )
+
+[node name="DisppearBlock9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 908, -1416 )
+
+[node name="DisppearBlock17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 972, -1416 )
+
+[node name="DisppearBlock18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1036, -1416 )
+
+[node name="DisppearBlock19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1100, -1416 )
+
+[node name="DisppearBlock20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1164, -1416 )
+
+[node name="DisppearBlock21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1228, -1416 )
+
+[node name="DisppearBlock15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2060, -1480 )
+
+[node name="DisppearBlock16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2124, -1480 )
+
+[node name="DisppearBlock7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1996, -1416 )
+
+[node name="DisppearBlock8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1996, -1480 )
+
+[node name="DisppearBlock36" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3084, -1736 )
+
+[node name="DisppearBlock37" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3020, -1736 )
+
+[node name="DisppearBlock10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1164, -1608 )
+
+[node name="DisppearBlock11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1164, -1672 )
+
+[node name="DisppearBlock12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1164, -1736 )
+
+[node name="DisppearBlock13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1164, -1800 )
+
+[node name="DisppearBlock14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1164, -1864 )
+
+[node name="DisppearBlock38" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1164, -1928 )
+
+[node name="DisppearBlock22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1548, -1608 )
+
+[node name="DisppearBlock23" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1548, -1672 )
+
+[node name="DisppearBlock24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1548, -1736 )
+
+[node name="DisppearBlock25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1548, -1800 )
+
+[node name="DisppearBlock26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1548, -1864 )
+
+[node name="DisppearBlock27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1996, -1608 )
+
+[node name="DisppearBlock32" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1996, -1544 )
+
+[node name="DisppearBlock28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1996, -1672 )
+
+[node name="DisppearBlock29" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1996, -1736 )
+
+[node name="DisppearBlock30" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1996, -1800 )
+
+[node name="DisppearBlock31" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1996, -1864 )
+
+[node name="DisppearBlock39" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2188, -1544 )
+
+[node name="DisppearBlock40" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2188, -1480 )
+
+[node name="DisppearBlock45" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2316, -1800 )
+
+[node name="DisppearBlock46" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2380, -1800 )
+
+[node name="DisppearBlock47" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2252, -1800 )
+
+[node name="DisppearBlock48" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2444, -1800 )
+
+[node name="DisppearBlock51" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2508, -1800 )
+
+[node name="DisppearBlock53" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2572, -1800 )
+
+[node name="DisppearBlock49" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2316, -1608 )
+
+[node name="DisppearBlock50" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2380, -1608 )
+
+[node name="DisppearBlock52" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2444, -1608 )
+
+[node name="DisppearBlock58" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2508, -1608 )
+
+[node name="DisppearBlock59" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2572, -1608 )
+
+[node name="DisppearBlock60" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2316, -1416 )
+
+[node name="DisppearBlock61" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2380, -1416 )
+
+[node name="DisppearBlock62" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2444, -1416 )
+
+[node name="DisppearBlock63" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2508, -1416 )
+
+[node name="DisppearBlock64" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2572, -1416 )
+
+[node name="DisppearBlock65" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2636, -1416 )
+
+[node name="DisppearBlock66" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2700, -1416 )
+
+[node name="DisppearBlock70" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3212, -584 )
+
+[node name="DisppearBlock71" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3212, -648 )
+
+[node name="DisppearBlock72" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3468, -392 )
+
+[node name="DisppearBlock73" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3468, -456 )
+
+[node name="DisppearBlock74" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3468, -840 )
+
+[node name="DisppearBlock75" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3468, -904 )
+
+[node name="DisppearBlock76" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3212, -1160 )
+
+[node name="DisppearBlock77" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3212, -1224 )
+
+[node name="DisppearBlock78" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3916, -1352 )
+
+[node name="DisppearBlock79" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3916, -1416 )
+
+[node name="DisppearBlock80" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3916, -1224 )
+
+[node name="DisppearBlock81" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3916, -1288 )
+
+[node name="DisppearBlock67" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2764, -1480 )
+
+[node name="DisppearBlock68" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2828, -1544 )
+
+[node name="DisppearBlock69" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2892, -1608 )
+
+[node name="DisppearBlock41" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2188, -1608 )
+
+[node name="DisppearBlock42" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2188, -1672 )
+
+[node name="DisppearBlock43" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2188, -1736 )
+
+[node name="DisppearBlock44" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2188, -1800 )
+
+[node name="DisppearBlock35" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2956, -1672 )
+
+[node name="Coin" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2924, -392 )
+
+[node name="Coin4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2476, -232 )
+
+[node name="Coin8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1612, -328 )
+
+[node name="Coin9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1548, -304 )
+
+[node name="Coin10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1676, -304 )
+
+[node name="Coin17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1228, -328 )
+
+[node name="Coin18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1164, -304 )
+
+[node name="Coin19" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1292, -304 )
+
+[node name="Coin36" parent="." instance=ExtResource( 5 )]
+position = Vector2( 940, -904 )
+
+[node name="Coin37" parent="." instance=ExtResource( 5 )]
+position = Vector2( 876, -880 )
+
+[node name="Coin38" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1004, -880 )
+
+[node name="Coin39" parent="." instance=ExtResource( 5 )]
+position = Vector2( 428, -1168 )
+
+[node name="Coin47" parent="." instance=ExtResource( 5 )]
+position = Vector2( 620, -1832 )
+
+[node name="Coin45" parent="." instance=ExtResource( 5 )]
+position = Vector2( 684, -1384 )
+
+[node name="Coin40" parent="." instance=ExtResource( 5 )]
+position = Vector2( 364, -1144 )
+
+[node name="Coin41" parent="." instance=ExtResource( 5 )]
+position = Vector2( 492, -1144 )
+
+[node name="Coin42" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1388, -1800 )
+
+[node name="Coin43" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1324, -1776 )
+
+[node name="Coin44" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1452, -1776 )
+
+[node name="Coin33" parent="." instance=ExtResource( 5 )]
+position = Vector2( 172, -520 )
+
+[node name="Coin34" parent="." instance=ExtResource( 5 )]
+position = Vector2( 108, -464 )
+
+[node name="Coin35" parent="." instance=ExtResource( 5 )]
+position = Vector2( 236, -488 )
+
+[node name="Coin15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1716, -272 )
+
+[node name="Coin16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1820, -272 )
+
+[node name="Coin11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1772, -232 )
+
+[node name="Coin12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1868, -304 )
+
+[node name="Coin13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1932, -328 )
+
+[node name="Coin14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1996, -304 )
+
+[node name="Coin5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2540, -296 )
+
+[node name="Coin6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2604, -232 )
+
+[node name="Coin7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3148, -264 )
+
+[node name="Coin20" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3212, -328 )
+
+[node name="Coin21" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3276, -264 )
+
+[node name="Coin2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2796, -520 )
+
+[node name="Coin3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2924, -648 )
+
+[node name="Coin22" parent="." instance=ExtResource( 5 )]
+position = Vector2( -148, -1640 )
+
+[node name="Coin23" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3116, -1640 )
+
+[node name="Coin24" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2604, -1704 )
+
+[node name="Coin28" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2380, -1512 )
+
+[node name="Coin25" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1804, -1544 )
+
+[node name="Coin26" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1868, -1608 )
+
+[node name="Coin27" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1932, -1672 )
+
+[node name="Coin29" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1644, -872 )
+
+[node name="Coin32" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1644, -936 )
+
+[node name="Coin31" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1644, -808 )
+
+[node name="Coin30" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1644, -744 )
+
+[node name="SceneChangeBlock" parent="." instance=ExtResource( 7 )]
+position = Vector2( 4492, -1608 )
+scene_path = "res://scenes/level2/level2.tscn"
+
+[node name="SceneChangeBlock2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 4492, -1672 )
+scene_path = "res://scenes/level2/level2.tscn"
+
+[node name="SceneChangeBlock3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 4492, -1736 )
+scene_path = "res://scenes/level2/level2.tscn"
